@@ -33,7 +33,7 @@ public class EntradaSaida {
         return scanner.next();
         // Cadastro do aluno feito pela instituição após o login
     }
-    
+
     public static int escolherOpcaoAluno() {
         System.out.println("[1] Cursos \n[2] Materiais \n[3] Ver agendamentos \n[4] Sair da conta");
         return scanner.nextInt();
@@ -43,4 +43,7 @@ public class EntradaSaida {
     public static void mostrarAlerta(String string) {
     }
 
+    public static void mostrarAlunos(String listarAlunos) {
+        System.out.println(listarAlunos);
+    }
 }

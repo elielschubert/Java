@@ -13,7 +13,7 @@ public class Cadastro {
     }
 
     public Escola logarConta(String loginEscolaCodigo, String loginEscolaSenha) {
-        String verificacao = "Usuário ou senha incorretos!";
+        String verificacao = "Usuário ou senha incorretos! Tente novamente";
         for (Escola e : this.listaDeEscolas) {
             if (e.codigoInstituicao.equals(loginEscolaCodigo) && e.senha.equals(loginEscolaSenha)) {
 
@@ -21,21 +21,13 @@ public class Cadastro {
                 return e;
                 // Se a informação do usuário bater com o que foi cadastrado, retorna o menu
                 // para a instituição.
+
+            } else {
+                System.out.println(verificacao);
+                // Se a informação não bater, retorna a verificação com a mensagem
             }
         }
-        System.out.println(verificacao);
         return null;
-        // Se a informação não bater, retorna a verificação com a mensagem
     }
 
-    public void mostrarLista(Escola esc) {
-    for(Escola e : this.listaDeEscolas){
-        if(e.codigoInstituicao.equals(esc.codigoInstituicao)){
-        for (Aluno a : this.listaDeAlunos) {
-            System.out.println(a.nome);
-            System.out.println(a.matricula);
-        }
-        }
-    }    
-}
 }

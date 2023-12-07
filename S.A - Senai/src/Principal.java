@@ -5,7 +5,6 @@ public class Principal {
         int opcaoEscola = 0;
         String loginEscolaCodigo = "";
         String loginEscolaSenha = "";
-        Escola indexEscola;
 
         LimpaConsole.limparTela();
 
@@ -26,42 +25,49 @@ public class Principal {
                     // Cadastro da instituição
                     break;
                 case 2:
-
+                    // Criar verificação para código da escola
                     LimpaConsole.limparTela();
 
                     loginEscolaCodigo = EntradaSaida.entrarEscola("o código");
                     loginEscolaSenha = EntradaSaida.entrarEscola("a senha");
-
-                    e=c.logarConta(loginEscolaCodigo, loginEscolaSenha);
-                    indexEscola = e;
+                    e = c.logarConta(loginEscolaCodigo, loginEscolaSenha);
 
                     // Login da instituição
-                    do {
-                        opcaoEscola = EntradaSaida.escolherOpcaoEscola();
-                        switch (opcaoEscola) {
-                            case 1:
-                                Aluno a = new Aluno();// < ISSO TÁ CERTO!!!!!!!!!!!!!!!!
+                        do {
+                            opcaoEscola = EntradaSaida.escolherOpcaoEscola();
+                            switch (opcaoEscola) {
+                                case 1:
+                                    Aluno a = new Aluno();// < ISSO TÁ CERTO!!!!!!!!!!!!!!!!
 
-                                a.nome = EntradaSaida.cadastrarAluno("o nome");
-                                a.matricula = EntradaSaida.cadastrarAluno("a matrícula");
-                                a.senha = EntradaSaida.cadastrarAluno("a senha");
+                                    a.nome = EntradaSaida.cadastrarAluno("o nome");
+                                    a.matricula = EntradaSaida.cadastrarAluno("a matrícula");
+                                    a.senha = EntradaSaida.cadastrarAluno("a senha");
+                                    e.adicionarAluno(a);
+                                    break;
 
-                                break;
-                            case 2:
-                                // Remover um aluno
-                                break;
-                            case 3:
-                                c.mostrarLista(indexEscola);
-                                // Visualizar os alunos, não TÁ FUNCIONANDO VOU ME MATAR
-                                break;
-                            case 4:
-                                // Sair da conta
-                                System.exit(0);
+                                case 2:
 
-                                break;
-                        }
-                    } while (opcao != 5);
+                                    // Remover um aluno
+                                    break;
+                                case 3:
+
+                                    if (!e.listaDeAlunos.isEmpty()) {
+                                        EntradaSaida.mostrarAlunos(e.listarAlunos());
+                                        // funciona maisomeno :)
+                                    } else {
+
+                                    }
+                                    break;
+                                case 4:
+                                    // Sair da conta
+                                    EntradaSaida.escolherOpcao();
+                                    break;
+                            }
+                        } while (opcaoEscola != 4);
+                        
+
                     break;
+
                 case 3:
 
                     break;
@@ -71,7 +77,13 @@ public class Principal {
                 case 5:
                     System.exit(0);
                     break;
+
             }
+
         } while (opcao != 6);
     }
 }
+
+// everybody gon' respect de shooter, but the one in the front of the gun lives
+// forever.
+// why god why god do i got to suffe

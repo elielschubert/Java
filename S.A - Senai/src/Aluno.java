@@ -41,4 +41,3 @@ public class Aluno {
 
 
 
-//everybody gon' respect de shooter, but the one in the front of the gun lives forever.
