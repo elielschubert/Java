@@ -34,8 +34,20 @@ public class EntradaSaida {
         // Cadastro do aluno feito pela instituição após o login
     }
 
+    public static String entrarAluno (String msg){
+        System.out.println("Informe " + msg + " do aluno: ");
+        return scanner.next();
+        // Login do aluno
+    }
+
     public static int escolherOpcaoAluno() {
-        System.out.println("[1] Cursos \n[2] Materiais \n[3] Ver agendamentos \n[4] Sair da conta");
+        System.out.println("[1] Agendar curso \n[2] Materiais \n[3] Sair da conta");
+        return scanner.nextInt();
+        // Menu do aluno
+    }
+
+        public static int escolherOpcaoCurso() {
+        System.out.println("[1] Música \n[2] Pintura \n[3] Dança \n[4] Fotografia \n[5] Teatro \n[6] Escultura \n[7] Sair");
         return scanner.nextInt();
         // Menu do aluno
     }
@@ -45,5 +57,19 @@ public class EntradaSaida {
 
     public static void mostrarAlunos(String listarAlunos) {
         System.out.println(listarAlunos);
+    }
+
+    public static int solicitaPosicao() {
+        System.out.println("Informe a posição do aluno a ser removido: ");
+        return scanner.nextInt();
+    }
+
+    public static void mostrarCursos(String listarCursos) {
+        System.out.println(listarCursos);
+    }
+
+    public static int escolherOpcaoMatricula(){
+        System.out.println("");
+        return scanner.nextInt();
     }
 }
