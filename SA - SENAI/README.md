@@ -2,7 +2,7 @@
 <h2 align="center"> BeArt </h2>
 
 ## Introdução
-Este é um projeto cujo objetivo é apresentar nossos aprendizados durante a disciplina de Lógica de Programação (LOPR). Tendo em o apelo social proposto em todos os temas, o escolhido por minha dupla e eu foi o incentivo a arte e cultura, através de uma aplicação de console, cujas funções serão aparesentadas abaixo.
+Este é um projeto cujo objetivo é apresentar nossos aprendizados durante a disciplina de Lógica de Programação (LOPR). Tendo em vista o apelo social proposto em todos os temas, o escolhido por minha dupla e eu foi o incentivo a arte e cultura, através de uma aplicação de console, cujas funções serão aparesentadas abaixo.
 
 ## Detalhes do projeto
 Este projeto foi criado utilizando a linguagem Java, utilizando orientação à objeto e pensado para ser utilizado apenas em console.
